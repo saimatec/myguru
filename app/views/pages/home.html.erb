@@ -1,0 +1,35 @@
+<!-- Main jumbotron for a primary marketing message or call to action -->
+	<div class="jumbotron">
+		<div class="page-header">
+			<h2 class="text-warning">
+				Home
+			</h2>
+		</div>
+    	<div class="row">
+    		<div class="col-lg-2">
+        		<div class="bs-component">
+           			<img src="assets/Logo.png" >
+           			<% if signed_in? %> 
+        			<% else %>
+          				<%= link_to "Sign up now !", signup_path ,:class => "btn btn-sm btn-warning" %>
+        			<% end %>
+       			</div>
+    		</div>
+			<div class="col-lg-10">
+        		<div class="bs-component">
+        	  		<div class="text-justify">
+      					<medium>Welcome to the web page of Sri Sri Sri Muralidhar Baba (Fakir Baba). With the divine blessings of Sri Babaji we hope to introduce ourselves and people at large to the divine path of spirituality.
+    					</medium><br /><br />
+    				</div>
+    				<medium class="text-warning text-center">
+    					<h4 id="type-blockquotes">Importance of Guru</h4>
+    				</medium>
+    				<div class="text-justify">
+      					<medium>Karma is the cause of happiness and sorrow. No God can influence what a human being wants, this leads to misery, unlimited sorrow and sadness. We are childern of the universal mother who cannot see the misery of her children, so she wanted the Lord to create some method, which could end the misery of mankind. To this the almighty replied <em> "Any human being, no matter what karma he has done earlier in this or his previous births, once he accepts a guru, surrenders himself totally to him (sharnagati) that person's sin would be forgiven and forgotten and he would be on the path to moksha."</em><br /><br />It is very funny that if someone wants to learn music, he looks for a good music teacher. If someone wants to learn tennis he looks for a good tennis coach, but when it comes to spiritual life it is basic human nature that he thinks he is good enough on his own and does not need a teacher in this field. We see around that everything needs a teacher so how on earth we enter the spiritual world without a teacher. That’s why a spiritual teacher or guru is so important. The scriptures also say that a guru is not only important, but is essential which means that there is no choice, if one wants to head towards self realization, then one has to have a guru and there is no allowance to this rule. Guru is the moksha-dvara. He is the gateway to the transcendental truth-consciousness. But, it is the aspirant that has to enter through it. The guru is a help, but the actual task of practical sadhana falls on the aspirant himself.<br /><br /></medium>
+      				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<%= render 'layouts/quotes' %>
+    </div>
+  

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> </title>
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/styling' %>
+    
+  </head>
+
+  <body>
+    <%= render 'layouts/navbar' %>
+    <div class ="container theme-showcase">
+    <section>
+      <% flash.each do |key, value| %>
+        <div class="flash <%= key %>"><%= value %>
+        </div>
+      <% end %>
+
+      <%= yield %>
+    </section>
+    </div>
+      <%= render 'layouts/footer' %>
+      
+        <!-- Javascripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <%= javascript_include_tag "slate" %>
+    <%= yield(:page_javascript) if content_for?(:page_javascript) %>
+  </body>
+
+</html>

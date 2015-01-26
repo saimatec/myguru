@@ -1,0 +1,9 @@
+<div class="jumbotron">
+	<h2> Sign up </h2>
+	<%= form_for(@user) do |f| %>
+		<%= render 'fields', :f => f %>
+		<div class="actions">
+			<%= f.submit"Sign up" %>
+		</div>
+	<% end %>
+</div>
