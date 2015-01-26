@@ -1,26 +1,41 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
 	<div class="jumbotron">
-		<div class="page-header">
+		<div class="page-header" style="padding-left:40px">
 			<h2 class="text-warning">
 				Home
 			</h2>
 		</div>
-    	<div class="row">
-    		<div class="col-lg-2">
-        		<div class="bs-component">
-           			<img src="assets/Logo.png" >
-           			<% if signed_in? %> 
-        			<% else %>
-          				<%= link_to "Sign up now !", signup_path ,:class => "btn btn-sm btn-warning" %>
-        			<% end %>
-       			</div>
-    		</div>
+    <div class="col-lg-6">
+      <div class="bs-component">
+          <blockquote>
+           <h2>help ever</h2>
+          </blockquote>
+      </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="bs-component">
+          <blockquote class="pull-right"><h2>hurt never</h2></blockquote>
+        </div>
+    </div>
+      <!-- </div> -->
+    <div class="row">
+    	<div class="col-lg-2">
+        <div class="bs-component">
+           <img src="assets/Logo.png" >
+           	<% if signed_in? %> 
+        		<% else %>
+              <div class="col-sm-6" style="padding-left:50px">
+          			<%= link_to "Sign up now !", signup_path ,:class => "btn btn-sm btn-warning"%>
+              </div>
+        		<% end %>
+       	</div>
+    	</div>
 			<div class="col-lg-10">
-        		<div class="bs-component">
-        	  		<div class="text-justify">
-      					<medium>Welcome to the web page of Sri Sri Sri Muralidhar Baba (Fakir Baba). With the divine blessings of Sri Babaji we hope to introduce ourselves and people at large to the divine path of spirituality.
-    					</medium><br /><br />
-    				</div>
+        <div class="bs-component" style="padding-left:40px">
+        	 <div class="text-justify">
+        			<medium>Welcome to the web page of Sri Sri Sri Muralidhar Baba (Fakir Baba). With the divine blessings of Sri Babaji we hope to introduce ourselves and people at large to the divine path of spirituality.
+      				</medium><br /><br />
+    			 </div>
     				<medium class="text-warning text-center">
     					<h4 id="type-blockquotes">Importance of Guru</h4>
     				</medium>
@@ -31,5 +46,4 @@
     		</div>
     	</div>
     	<%= render 'layouts/quotes' %>
-    </div>
-  
+  </div>
