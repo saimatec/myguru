@@ -1,17 +1,19 @@
-<div class="jumbotron">
-<% if @user.errors.any? %>
-	<div id="error_explanation">
-		<h2>
-			<%= pluralize(@user.errors.count,"Error") %><br />
-			User cannot be saved
-		</h2>
-		<p> There were problems with the following fields:</p>
-		<ul>
-			<% @user.errors.full_messages.each do |message| %>
-		
-			<li><%= message %></li>
-			<% end %>
-		</ul>
+<div class="bs-component">
+	<div class="panel panel-danger">
+		<% if @user.errors.any? %>
+			<div class="panel-heading">
+			<h3 class="panel-title text-center">Signup failure..!<br/></h3>
+			</div>
+			<div class="panel-body">
+    			<medium> <%= pluralize(@user.errors.count,"  Error") %>
+    						with the following fields
+    			</medium>
+    			<ul>
+					<% @user.errors.full_messages.each do |message| %>
+					<li><%= message %></li>
+						<% end %>
+				</ul>
+			</div>
+		<% end %>
 	</div>
-<% end %>
 </div>

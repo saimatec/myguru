@@ -1,17 +1,17 @@
 <%= render 'shared/error_messages' %>
-	<div class="field">
-		<%= f.label 		:name %><br />
-		<%= f.text_field 	:name, :placeholder => "Enter Your Name" %>
-	</div>
-	<div class="field">
-		<%= f.label 		:email %><br />
-		<%= f.text_field 	:email, :placeholder => "Enter Your Email'id" %>
-	</div>
-	<div class="field">
-		<%= f.label 			:password %><br />
-		<%= f.password_field 	:password, :placeholder =>"Enter Your Password"%>	
-	</div>
-	<div class="field">
-		<%= f.label 			:password_confirmation,"Confirmation" %><br />
-		<%= f.password_field 	:password_confirmation, :placeholder =>"Enter Your Password Again" %>
-	</div>
+<div class="field">
+	<%= f.label 		:name, :class =>"control-label" %>
+	<%= f.text_field 	:name, :placeholder => "Name", :class => "form-control", :style => "width:230px" %>
+</div>
+<div class="field">
+	<%= f.label 		:email, :class => "control-label" %>
+	<%= f.text_field 	:email, :placeholder => "Email id", :class => "form-control", :style => "width:230px" %>
+</div>
+<div class="field">
+	<%= f.label 			:password, :class => "control-label" %>
+	<%= f.password_field 	:password, :placeholder =>"Password", :class => "form-control", :style => "width:230px"%> 	
+</div>
+<div class="field">
+	<%= f.label 			:password_confirmation,"Confirmation", :class => "control-label" %>
+	<%= f.password_field 	:password_confirmation, :placeholder =>"Password Again", :class => "form-control", :style => "width:230px"%>
+</div>	
