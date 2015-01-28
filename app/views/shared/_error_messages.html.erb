@@ -2,17 +2,14 @@
 	<div class="panel panel-danger">
 		<% if @user.errors.any? %>
 			<div class="panel-heading">
-			<h3 class="panel-title text-center">Signup failure..!<br/></h3>
+			<h2 class="panel-title text-center">Error Signing up<br/></h2>
 			</div>
 			<div class="panel-body">
-    			<medium> <%= pluralize(@user.errors.count,"  Error") %>
-    						with the following fields
-    			</medium>
-    			<ul>
+    			<p> <%= pluralize(@user.errors.count,"  Error") %>
+    			</p>
 					<% @user.errors.full_messages.each do |message| %>
 					<li><%= message %></li>
-						<% end %>
-				</ul>
+					<% end %>
 			</div>
 		<% end %>
 	</div>
