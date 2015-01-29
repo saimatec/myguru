@@ -7,7 +7,9 @@ gem 'rails', '3.2.19'
 
 gem 'mysql2'
 gem 'gravatar_image_tag', '0.1.0'
-gem 'will_paginate', '3.0.0'
+#gem 'will_paginate', '3.0.0'
+gem 'bootstrap-will_paginate'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
