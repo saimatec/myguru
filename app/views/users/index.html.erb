@@ -1,8 +1,34 @@
 <div class="jumbotron">
-	<h2 class="text-warning"> Members </h2>
-	<%= will_paginate %>
-	<ul class="users">
-		<%= render @users %>
-	</ul>
-	<%= will_paginate %>
+	<div class="row">
+    	<div class="col-lg-3">
+        	<div class="bs-component">
+	        	<h2 class="text-warning">Members</h2>
+            </div>
+        </div>
+        <div class="col-lg-8">
+        	<div class="bs-component">
+            	<%= will_paginate %>
+            	<table class="table table-striped table-hover">                
+                	<tbody>
+                		<% @users.each do |user| %>
+                			<tr class="primary users">
+                				<td><%= gravatar_for user, :size => 30 %></td>
+                		   		<td><%= link_to user.name, user %></td>
+                		   		<td><%= user.email %></td>
+                		   		<% if current_user.admin? %>
+                		   		<td> | </td>
+                		   		<td> 
+								<%= link_to "Delete", user, :method => :delete, :confirm => "You sure?",
+										:title => "Delete #{user.name}" %> </td>
+
+								<% end %>
+                   			</tr>
+                   		<% end %>
+                	</tbody>	
+				</table>			
+				<%= will_paginate %>
+			</div>
+		</div>
+	</div>
 </div>
+
